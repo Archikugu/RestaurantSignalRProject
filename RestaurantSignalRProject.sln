@@ -3,11 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34321.82
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantSignalRApi", "RestaurantSignalRApi\RestaurantSignalRApi.csproj", "{6D96794D-B5E4-4E12-BC8C-4AD0A7712AC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantSignalRApi", "RestaurantSignalRApi\RestaurantSignalRApi.csproj", "{6D96794D-B5E4-4E12-BC8C-4AD0A7712AC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantSignalRWebUI", "RestaurantSignalRWebUI\RestaurantSignalRWebUI.csproj", "{A62EBAE3-F4CE-4389-BAB2-375985C85F44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantSignalRWebUI", "RestaurantSignalRWebUI\RestaurantSignalRWebUI.csproj", "{A62EBAE3-F4CE-4389-BAB2-375985C85F44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantSignalR.Entities", "RestaurantSignalR.Entities\RestaurantSignalR.Entities.csproj", "{3ED1942B-2671-4A82-80AE-22C68E74472C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantSignalR.Entities", "RestaurantSignalR.Entities\RestaurantSignalR.Entities.csproj", "{3ED1942B-2671-4A82-80AE-22C68E74472C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantSignalR.DataAccess", "RestaurantSignalR.DataAccess\RestaurantSignalR.DataAccess.csproj", "{08556753-B7B6-43A6-A57F-472922D07214}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantSignalR.DTO", "RestaurantSignalR.DTO\RestaurantSignalR.DTO.csproj", "{09E7C850-D394-4ED9-A7A1-BC0214849592}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantSignalR.Business", "RestaurantSignalR.Business\RestaurantSignalR.Business.csproj", "{B33F0776-EE7E-40F8-9764-B1C5A7F7D366}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +33,18 @@ Global
 		{3ED1942B-2671-4A82-80AE-22C68E74472C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ED1942B-2671-4A82-80AE-22C68E74472C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3ED1942B-2671-4A82-80AE-22C68E74472C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08556753-B7B6-43A6-A57F-472922D07214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08556753-B7B6-43A6-A57F-472922D07214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08556753-B7B6-43A6-A57F-472922D07214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08556753-B7B6-43A6-A57F-472922D07214}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09E7C850-D394-4ED9-A7A1-BC0214849592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09E7C850-D394-4ED9-A7A1-BC0214849592}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09E7C850-D394-4ED9-A7A1-BC0214849592}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09E7C850-D394-4ED9-A7A1-BC0214849592}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B33F0776-EE7E-40F8-9764-B1C5A7F7D366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B33F0776-EE7E-40F8-9764-B1C5A7F7D366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B33F0776-EE7E-40F8-9764-B1C5A7F7D366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B33F0776-EE7E-40F8-9764-B1C5A7F7D366}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

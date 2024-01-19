@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RestaurantSignalR.DataAccess\RestaurantSignalR.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>
