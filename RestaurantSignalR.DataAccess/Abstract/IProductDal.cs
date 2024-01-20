@@ -4,5 +4,6 @@ namespace RestaurantSignalR.DataAccess.Abstract
 {
     public interface IProductDal : IGenericDal<Product>
     {
+        List<Product> GetProductsWithCategories();
     }
 }

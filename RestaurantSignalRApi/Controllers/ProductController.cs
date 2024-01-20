@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using RestaurantSignalR.Business.Abstract;
+using RestaurantSignalR.DataAccess.Concrete;
 using RestaurantSignalR.DTO.ProductDto;
 using RestaurantSignalR.Entities.Concrete;
 
@@ -40,6 +42,24 @@ namespace RestaurantSignalRApi.Controllers
             });
             return Ok("Ürün Bilgisi Eklendi");
         }
+
+        [HttpGet("ProductListWithCategory")]
+        public IActionResult ProductListWithCategory()
+        {
+            var context = new Context();
+            var values = context.Products.Include(x => x.Category).Select(y => new ResultProductWithCategory
+            {
+                Description = y.Description,
+                ImageUrl = y.ImageUrl,
+                Price = y.Price,
+                ProductID = y.ProductID,
+                ProductName = y.ProductName,
+                ProductStatus = y.ProductStatus,
+                CategoryName = y.Category.CategoryName
+            });
+            return Ok(values.ToList());
+        }
+
         [HttpDelete("{id}")]
         public IActionResult DeleteProduct(int id)
         {
