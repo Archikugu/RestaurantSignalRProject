@@ -8,7 +8,7 @@ namespace RestaurantSignalR.DTO.BookingDto
 {
     public class ResultBookingDto
     {
-          {
+
         public int BookingID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
@@ -18,4 +18,4 @@ namespace RestaurantSignalR.DTO.BookingDto
         public DateTime Date { get; set; }
     }
 }
-}
+

@@ -17,10 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\RestaurantSignalR.Business\RestaurantSignalR.Business.csproj" />
     <ProjectReference Include="..\RestaurantSignalR.DTO\RestaurantSignalR.DTO.csproj" />
   </ItemGroup>
