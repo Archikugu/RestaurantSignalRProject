@@ -6,4 +6,18 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\Ready-Bootstrap-Dashboard-master\.DS_Store" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RestaurantSignalR.DataAccess\RestaurantSignalR.DataAccess.csproj" />
+    <ProjectReference Include="..\RestaurantSignalR.DTO\RestaurantSignalR.DTO.csproj" />
+    <ProjectReference Include="..\RestaurantSignalRApi\RestaurantSignalRApi.csproj" />
+  </ItemGroup>
+
 </Project>
