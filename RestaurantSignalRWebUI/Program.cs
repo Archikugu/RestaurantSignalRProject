@@ -1,11 +1,29 @@
 using RestaurantSignalR.DataAccess.Concrete;
+using RestaurantSignalR.Entities.Concrete;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddHttpClient();
+var requireAuthorizePolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
 
 // Add services to the container.
+builder.Services.AddDbContext<Context>();
+builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
+builder.Services.AddHttpClient();
 builder.Services.AddControllersWithViews();
+
+
+
+//builder.Services.AddControllersWithViews(opt =>
+//{
+//    opt.Filters.Add(new AuthorizeFilter(requireAuthorizePolicy));
+//});
+
+//builder.Services.ConfigureApplicationCookie(opts =>
+//{
+//    opts.LoginPath = "/Login/Index";
+//});
+
 
 var app = builder.Build();
 
@@ -23,10 +41,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Default}/{action=Index}/{id?}");
 
 app.Run();

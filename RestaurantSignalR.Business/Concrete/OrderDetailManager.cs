@@ -1,0 +1,45 @@
+﻿using RestaurantSignalR.Business.Abstract;
+using RestaurantSignalR.DataAccess.Abstract;
+using RestaurantSignalR.Entities.Concrete;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RestaurantSignalR.Business.Concrete
+{
+    public class OrderDetailManager : IOrderDetailService
+    {
+        private readonly IOrderDetailDal _orderDetailDal;
+        public OrderDetailManager(IOrderDetailDal orderDetailDal)
+        {
+            _orderDetailDal = orderDetailDal;
+        }
+
+        public void TAdd(OrderDetail entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TDelete(OrderDetail entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public OrderDetail TGetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<OrderDetail> TGetListAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(OrderDetail entity)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

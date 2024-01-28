@@ -41,6 +41,17 @@ namespace RestaurantSignalR.Business.Concrete
         {
             _bookingDal.Update(entity);
         }
+
+
+        public void BookingStatusApproved(int id)
+        {
+            _bookingDal.BookingStatusApproved(id);
+        }
+
+        public void BookingStatusCancelled(int id)
+        {
+            _bookingDal.BookingStatusCancelled(id);
+        }
     }
 
 }

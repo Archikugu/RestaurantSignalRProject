@@ -8,7 +8,7 @@
         public decimal TotalPrice { get; set; }
         public int ProductID { get; set; }
         public Product Product { get; set; }
-        //public int MenuTableID { get; set; }
-        //public MenuTable MenuTable { get; set; }
+        public int MenuTableID { get; set; }
+        public MenuTable MenuTable { get; set; }
     }
 }

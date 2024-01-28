@@ -28,19 +28,64 @@ namespace RestaurantSignalRApi.Controllers
             return Ok(value);
         }
 
-        [HttpPost]
-        public IActionResult CreateProduct(CreateProductDto createProductDto)
+        [HttpGet("ProductCount")]
+        public IActionResult ProductCount()
         {
-            _productService.TAdd(new Product()
-            {
-                Description = createProductDto.Description,
-                ImageUrl = createProductDto.ImageUrl,
-                Price = createProductDto.Price,
-                ProductName = createProductDto.ProductName,
-                ProductStatus = createProductDto.ProductStatus,
-                CategoryID = createProductDto.CategoryID
-            });
-            return Ok("Ürün Bilgisi Eklendi");
+            return Ok(_productService.TProductCount());
+        }
+
+        [HttpGet("TotalPriceByDrinkCategory")]
+        public IActionResult TotalPriceByDrinkCategory()
+        {
+            return Ok(_productService.TTotalPriceByDrinkCategory());
+        }
+
+        [HttpGet("TotalPriceBySaladCategory")]
+        public IActionResult TotalPriceBySaladCategory()
+        {
+            return Ok(_productService.TTotalPriceBySaladCategory());
+        }
+
+        [HttpGet("ProductNameByMaxPrice")]
+        public IActionResult ProductNameByMaxPrice()
+        {
+            return Ok(_productService.TProductNameByMaxPrice());
+        }
+
+        [HttpGet("ProductNameByMinPrice")]
+        public IActionResult ProductNameByMinPrice()
+        {
+            return Ok(_productService.TProductNameByMinPrice());
+        }
+
+        [HttpGet("ProductAvgPriceByHamburger")]
+        public IActionResult ProductAvgPriceByHamburger()
+        {
+            return Ok(_productService.TProductAvgPriceByHamburger());
+        }
+
+        [HttpGet("ProductCountByHamburger")]
+        public IActionResult ProductCountByHamburger()
+        {
+            return Ok(_productService.TProductCountByCategoryNameHamburger());
+        }
+
+        [HttpGet("ProductCountByDrink")]
+        public IActionResult ProductCountByDrink()
+        {
+            return Ok(_productService.TProductCountByCategoryNameDrink());
+        }
+
+        [HttpGet("ProductPriceAvg")]
+        public IActionResult ProductPriceAvg()
+        {
+            return Ok(_productService.TProductPriceAvg());
+        }
+
+        [HttpGet("ProductPriceBySteakBurger")]
+        public IActionResult ProductPriceBySteakBurger()
+        {
+            return Ok(_productService.TProductPriceBySteakBurger());
         }
 
         [HttpGet("ProductListWithCategory")]
@@ -60,6 +105,20 @@ namespace RestaurantSignalRApi.Controllers
             return Ok(values.ToList());
         }
 
+        [HttpPost]
+        public IActionResult CreateProduct(CreateProductDto createProductDto)
+        {
+            _productService.TAdd(new Product()
+            {
+                Description = createProductDto.Description,
+                ImageUrl = createProductDto.ImageUrl,
+                Price = createProductDto.Price,
+                ProductName = createProductDto.ProductName,
+                ProductStatus = createProductDto.ProductStatus,
+                CategoryID = createProductDto.CategoryID
+            });
+            return Ok("Ürün Bilgisi Eklendi");
+        }
         [HttpDelete("{id}")]
         public IActionResult DeleteProduct(int id)
         {
